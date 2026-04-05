@@ -10,6 +10,44 @@
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary_large_image" />
     <style>
+/* שיפור תצוגת ההרואי */
+.header {
+    /* תדאג שהתמונה תכסה את כל הרקע במקום להתכווץ */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 300px 20px 100px; /* רווחים למחשב שולחני */
+}
+
+/* מדיה־קוורי למסכים צרים */
+@media (max-width: 600px) {
+  .header {
+    padding: 160px 15px 60px; /* פחות רווחים בחלק העליון והתחתון */
+  }
+  .header h1 {
+    font-size: 2em;  /* כותרת קטנה יותר כדי לא לרדת שורה בצורה מוזרה */
+  }
+  .header p {
+    font-size: 1em;
+  }
+  .service {
+    flex: 1 1 100%; /* כרטיס שירות אחד בכל שורה במסכים צרים */
+    margin: 15px 0;
+  }
+  .platforms a {
+    padding: 12px 20px;
+    margin: 8px 0;
+  }
+  .social-links a {
+    width: 50px;
+    height: 50px;
+  }
+  .social-links a svg {
+    width: 24px;
+    height: 24px;
+  }
+}
+</style>
         body {
             font-family: Arial, sans-serif;
             line-height: 1.6;
